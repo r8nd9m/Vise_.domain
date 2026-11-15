@@ -3257,7 +3257,7 @@ function action(el){const act=el.dataset.action;if(!act)return;
  switch(act){
   case'choose-subject':pendingSubject=el.dataset.subject;view='year';render();break;
   case'go-subject':pendingSubject=null;view='subject';render();break;
-  case'choose-yeasr':pendingYear=Number(el.dataset.year);if(pendingYear>=11){view='senior';render();}else createRun(pendingSubject,pendingYear);break;
+  case'choose-year':pendingYear=Number(el.dataset.year);if(pendingYear>=11){view='senior';render();}else createRun(pendingSubject,pendingYear);break;
   case'back-year':view='year';render();break;
   case'choose-pathway':createRun(pendingSubject,pendingYear,el.dataset.pathway);break;
   case'portal-start':createRun(el.dataset.subject,Number(el.dataset.year),el.dataset.pathway||null);break;
